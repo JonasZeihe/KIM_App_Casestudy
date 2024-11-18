@@ -1,65 +1,64 @@
 :root {
-   /* Primary Colors */
-   --primary-1: #CCD1FF;
-   --primary-2: #8A95FD;
-   --primary-3: #3441F9; /* Main */
-   --primary-4: #1F2CCB;
-   --primary-5: #0F197A;
- 
-   /* Secondary Colors */
-   --secondary-1: #FFC3A1;
-   --secondary-2: #FF9D6A;
-   --secondary-3: #FD7A26; /* Main */
-   --secondary-4: #D35D10;
-   --secondary-5: #9A3C06;
- 
-   /* Accent Colors */
-   --accent-1: #C9F4F6;
-   --accent-2: #B1E8EC;
-   --accent-3: #9FDFE4; /* Main */
-   --accent-4: #7AC4CB;
-   --accent-5: #509196;
- 
-   /* Secondary Accent Colors */
-   --secondary-accent-1: #FFF2D1;
-   --secondary-accent-2: #FAE6B2;
-   --secondary-accent-3: #F5E2A4; /* Main */
-   --secondary-accent-4: #D7BF85;
-   --secondary-accent-5: #B49D6B;
- 
-   /* Background Colors */
-   --background-1: #D3D5F8;
-   --background-2: #B5BAF1;
-   --background-3: #999EF6; /* Main */
-   --background-4: #6D72C6;
-   --background-5: #45488B;
- 
-   /* Neutral Colors */
-   --neutral-1: #FFFFFF; /* White */
-   --neutral-2: #E0E0E0; /* Light Gray */
-   --neutral-3: #B3B3B3; /* Gray */
-   --neutral-4: #808080; /* Dark Gray */
-   --neutral-5: #4D4D4D; /* Darker Gray */
-   --neutral-6: #000000; /* Black */
- 
-   /* Typography */
-   --font-headline: "Futura", sans-serif;
-   --font-body: "Helvetica Neue", sans-serif;
- 
-   /* Font Sizes */
-   --font-size-h1: 38px;
-   --font-size-h2: 28px;
-   --font-size-h3: 22px;
-   --font-size-body: 16px;
-   --font-size-detail: 14px;
- 
-   /* Line Heights */
-   --line-height-body: 1.6;
-   --line-height-heading: 1.3;
- 
-   /* Font Weights */
-   --font-weight-bold: 700;
-   --font-weight-medium: 500;
-   --font-weight-regular: 400;
- }
- 
+  /* Primary Colors */
+  --primary-1: #CCD1FF;
+  --primary-2: #8A95FD;
+  --primary-3: #3441F9; /* Main */
+  --primary-4: #1F2CCB;
+  --primary-5: #0F197A;
+
+  /* Secondary Colors */
+  --secondary-1: #FFC3A1;
+  --secondary-2: #FF9D6A;
+  --secondary-3: #FD7A26; /* Main */
+  --secondary-4: #D35D10;
+  --secondary-5: #9A3C06;
+
+  /* Accent Colors */
+  --accent-1: #C9F4F6;
+  --accent-2: #B1E8EC;
+  --accent-3: #9FDFE4; /* Main */
+  --accent-4: #7AC4CB;
+  --accent-5: #509196;
+
+  /* Secondary Accent Colors */
+  --secondary-accent-1: #FFF2D1;
+  --secondary-accent-2: #FAE6B2;
+  --secondary-accent-3: #F5E2A4; /* Main */
+  --secondary-accent-4: #D7BF85;
+  --secondary-accent-5: #B49D6B;
+
+  /* Background Colors */
+  --background-1: #D3D5F8;
+  --background-2: #B5BAF1;
+  --background-3: #999EF6; /* Main */
+  --background-4: #6D72C6;
+  --background-5: #45488B;
+
+  /* Neutral Colors */
+  --neutral-1: #FFFFFF; /* White */
+  --neutral-2: #E0E0E0; /* Light Gray */
+  --neutral-3: #B3B3B3; /* Gray */
+  --neutral-4: #808080; /* Dark Gray */
+  --neutral-5: #4D4D4D; /* Darker Gray */
+  --neutral-6: #000000; /* Black */
+
+  /* Typografie */
+  --font-headline: "Futura", sans-serif;
+  --font-body: "Helvetica Neue", sans-serif;
+
+  /* Font Sizes */
+  --font-size-h1: 38px;
+  --font-size-h2: 28px;
+  --font-size-h3: 22px;
+  --font-size-body: 16px;
+  --font-size-detail: 14px;
+
+  /* Line Heights */
+  --line-height-body: 1.6;
+  --line-height-heading: 1.3;
+
+  /* Font Weights */
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+}

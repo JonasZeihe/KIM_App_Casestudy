@@ -28,6 +28,16 @@ header .navigation a:hover {
   color: var(--secondary-1);
 }
 
+  /* Footer */
+  footer {
+    background: var(--primary-3); /* Primary Main */
+    color: var(--neutral-1); /* White */
+    text-align: center;
+    padding: 10px;
+    font-size: var(--font-size-detail);
+    margin-top: 20px;
+  }
+
 /* Cards */
 .card {
   background: var(--neutral-1);
@@ -39,8 +49,20 @@ header .navigation a:hover {
 }
 .card:hover {
   transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
+  /* Unordered List Emojis */
+  .card ul li {
+    margin-bottom: 10px;
+    font-size: var(--font-size-body);
+    list-style: none;
+  }
+  .card ul li:before {
+    margin-right: 10px;
+    color: var(--secondary-3); /* Secondary Main */
+  }
 
 /* Buttons */
 .btn {
@@ -61,18 +83,39 @@ header .navigation a:hover {
 }
 
 /* Images */
-.image-large,
-.image-medium,
-.appscreen {
+
+/* Image Placeholder Styling */
+.image-placeholder {
   width: 100%;
-  border-radius: 8px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--neutral-2); /* Light Gray */
+  color: var(--neutral-5); /* Darker Gray */
+  font-size: 16px;
+  border: 2px dashed var(--neutral-3); /* Gray */
+  border-radius: 12px;
+  margin: 20px 0;
+}
+/* Bilder */
+.image-large {
+  width: 100%;
+  border-radius: 16px;
   margin-top: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
 }
 .image-medium {
+  width: 100%;
   max-width: 600px;
+  border-radius: 12px;
   margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
 }
 .appscreen {
+  width: 100%;
   max-width: 300px;
+  border-radius: 8px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

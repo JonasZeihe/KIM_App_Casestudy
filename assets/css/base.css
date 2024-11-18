@@ -1,17 +1,17 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body */
-body {
-  font-family: var(--font-body);
-  line-height: var(--line-height-body);
-  color: var(--primary-3);
-  background: linear-gradient(to bottom, var(--neutral-1), var(--background-1));
-}
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: var(--font-body);
+    line-height: var(--line-height-body);
+    color: var(--primary-3); /* Primary Main */
+    background: linear-gradient(to bottom, var(--neutral-1), var(--background-1)); /* Soft Background Gradient */
+  }
 
 /* Typography */
 h1, h2, h3 {
@@ -48,3 +48,9 @@ blockquote {
   font-style: italic;
   color: var(--neutral-5);
 }
+
+  /* Highlight Styling */
+  .highlight {
+    color: var(--secondary-3); /* Secondary Main */
+    font-weight: bold;
+  }
