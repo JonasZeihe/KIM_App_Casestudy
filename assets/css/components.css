@@ -28,6 +28,99 @@ header .navigation a:hover {
   color: var(--secondary-1);
 }
 
+/* Burger Menu Default State */
+header .burger-menu {
+  display: none; /* Standard */
+  background: transparent; /* Entfernt weißen Kasten */
+  color: var(--neutral-1); /* Weiß */
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+}
+
+/* Burger Menu Hover */
+header .burger-menu:hover {
+  color: var(--secondary-1); /* Sekundärfarbe */
+  background: transparent; /* Kein Hover-Hintergrund */
+}
+
+
+/* Styling für offene Navigation */
+header .navigation ul.active {
+  background: var(--neutral-1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel angepasst an bestehendes Design */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--neutral-1); /* Weißer Hintergrund */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* Carousel Slide */
+.carousel-slide {
+  flex: 0 0 100%; /* Füllt den gesamten Container */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carousel Slide Image */
+.carousel-slide img {
+  width: 100%; /* Füllt den Slide aus */
+  height: auto;
+  object-fit: cover; /* Schneidet Bilder proportional zu */
+  border-radius: 12px;
+}
+
+
+/* Buttons angepasst */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-3); /* Primärfarbe */
+  color: var(--neutral-1); /* Weiß */
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background: var(--primary-2); /* Hover-Farbe */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
   /* Footer */
   footer {
     background: var(--primary-3); /* Primary Main */
@@ -98,6 +191,22 @@ header .navigation a:hover {
   border-radius: 12px;
   margin: 20px 0;
 }
+
+.appscreen-placeholder {
+  width: 100%;
+  max-width: 300px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--neutral-2); /* Light Gray */
+  color: var(--neutral-5); /* Darker Gray */
+  font-size: 14px;
+  border: 2px dashed var(--neutral-3); /* Gray */
+  border-radius: 8px;
+  margin: 10px auto;
+}
+
 /* Bilder */
 .image-large {
   width: 100%;
