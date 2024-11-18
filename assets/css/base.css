@@ -1,0 +1,50 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
+  color: var(--primary-3);
+  background: linear-gradient(to bottom, var(--neutral-1), var(--background-1));
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-headline);
+  color: var(--primary-4);
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+}
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-regular);
+}
+
+p {
+  font-size: var(--font-size-body);
+  color: var(--neutral-5);
+  margin-bottom: 15px;
+  line-height: var(--line-height-body);
+}
+
+blockquote {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: var(--background-2);
+  border-left: 6px solid var(--primary-3);
+  font-style: italic;
+  color: var(--neutral-5);
+}

@@ -1,0 +1,110 @@
+/* Tablets und kleinere Bildschirme */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .main-section {
+    padding: 40px 15px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  header .navigation ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card {
+    padding: 20px;
+    margin: 0 auto 15px;
+    max-width: 600px;
+  }
+
+  .image-large,
+  .image-medium,
+  .appscreen {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  header .navigation ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-section {
+    padding: 20px 10px;
+  }
+
+  .card {
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 400px;
+  }
+
+  .image-placeholder {
+    height: 120px;
+  }
+
+  footer {
+    font-size: 11px;
+  }
+}

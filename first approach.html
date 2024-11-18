@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KIM – Die Verbindungs-App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Futura:wght@300;400;600&family=Helvetica+Neue:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #3441F9, #FD7A26);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-family: 'Futura', sans-serif;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 3rem 1rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #3441F9;
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+        }
+
+        .project-overview, .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .project-overview div, .features div {
+            flex: 1 1 30%;
+            background: #F5E2A4;
+            padding: 1.5rem;
+            margin: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project-overview div h3, .features div h3 {
+            color: #3441F9;
+            font-size: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #3441F9;
+            color: #FFF;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 1rem auto;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #1F2CCB;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #FD7A26;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .project-overview, .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>KIM – Die Verbindungs-App</h1>
+        <p>Finde dein missing piece: Echte Verbindungen, unterstützt durch KI</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Case Study: KIM – Die Verbindungs-App für echte Freundschaften</h2>
+        <p>Ein intensives 4-wöchiges UX/UI-Projekt, das eine App entwickelte, die Menschen durch KI-basierte Persönlichkeitsanalysen verbindet.</p>
+        <img src="hero_kim_chat_screen.png" alt="KIM Chat Screen">
+    </section>
+
+    <!-- Projektüberblick -->
+    <section>
+        <h2>Projektüberblick</h2>
+        <div class="project-overview">
+            <div>
+                <h3>Produktbeschreibung</h3>
+                <p>KIM ist eine App, die Menschen durch KI-gestützte Persönlichkeitsanalysen verbindet, um echte, tiefe Freundschaften zu fördern.</p>
+            </div>
+            <div>
+                <h3>Team & Rollen</h3>
+                <p>Das Team bestand aus Isabel, Jonas und Darya, die als UX/UI-Designer im „neue fische“-Bootcamp zusammenarbeiteten.</p>
+            </div>
+            <div>
+                <h3>Methoden & Tools</h3>
+                <p>
+                    <ul>
+                        <li><strong>Tools:</strong> Figma, FigJam, Notion</li>
+                        <li><strong>Methoden:</strong> Desk Research, User Interviews, quantitative Umfragen, Personas, User Journey Maps, Wireframing, Prototyping, Testing</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <h3>Problemstellung</h3>
+                <p>Der aktuelle Markt ist dominiert von oberflächlichen Netzwerken. KIM hebt sich ab, indem es emotionale Tiefe in Beziehungen fördert.</p>
+            </div>
+        </div>
+        <img src="project_overview.png" alt="Projektübersicht">
+    </section>
+
+    <!-- Entdeckungsphase -->
+    <section>
+        <h2>Entdeckungsphase</h2>
+        <div>
+            <h3>Desk Research & Wettbewerbsanalyse</h3>
+            <p>Durch die Analyse bestehender Plattformen identifizierten wir zwei Ansätze: Teambuilding und persönliche Verbindungen. KIM entschied sich für letztere, um echte Freundschaften zu fördern.</p>
+            <img src="competitor_analysis.png" alt="Wettbewerbsanalyse">
+        </div>
+        <div>
+            <h3>User Research</h3>
+            <p>
+                Mithilfe von 70 Umfrageteilnehmern und 5 Interviews fanden wir heraus, dass viele Menschen tiefe Verbindungen suchten, aber diese schwer zu finden waren.
+            </p>
+            <img src="user_research_insights.png" alt="User Research Insights">
+        </div>
+        <div>
+            <h3>Persona-Entwicklung</h3>
+            <p>Tom, unsere wichtigste Persona, repräsentiert die Zielgruppe: Junge Berufseinsteiger, die echte Verbindungen suchen.</p>
+            <img src="persona_tom.png" alt="Persona Tom">
+        </div>
+    </section>
+
+    <!-- UX-Designprozess -->
+    <section>
+        <h2>UX-Designprozess</h2>
+        <div class="features">
+            <div>
+                <h3>Ideation und Entwürfe</h3>
+                <p>Low-Fidelity-Wireframes halfen uns, die Struktur und User Journey zu testen. Die erste Iteration konzentrierte sich auf Benutzerfreundlichkeit und emotionale Ansprache.</p>
+                <img src="wireframes_mid_fidelity.png" alt="Wireframes Mid-Fidelity">
+            </div>
+            <div>
+                <h3>Interaktive Features</h3>
+                <p>KIM enthält innovative Features wie ein Verbindungstiefen-Radialdiagramm, KI-gestützten Chat und Icebreaker-Fragen.</p>
+                <img src="interaction_radial_chart.png" alt="Interaktive Features">
+            </div>
+            <div>
+                <h3>Prototyping und Iterationen</h3>
+                <p>Durch Mid-Fidelity- und High-Fidelity-Prototypen verbesserten wir das Storytelling und die visuelle Gestaltung der App.</p>
+                <img src="prototyp_screens.png" alt="Prototyp Screens">
+            </div>
+        </div>
+    </section>
+
+    <!-- Finale Lösung -->
+    <section>
+        <h2>Finale Lösung</h2>
+        <p>
+            Die finale Version von KIM kombiniert KI, intuitive Funktionen und emotionale Tiefe:
+            <ul>
+                <li><strong>KI-gestützter Chat:</strong> Dynamische Persönlichkeitsanalysen fördern authentische Gespräche.</li>
+                <li><strong>Gruppenvorschläge mit Kompatibilitätsscore:</strong> Verbindungen basieren auf gemeinsamen Interessen und Zielen.</li>
+                <li><strong>Icebreaker-Fragen:</strong> Niedrigschwellige Einstiegsmöglichkeiten erleichtern die Kommunikation.</li>
+            </ul>
+        </p>
+        <img src="final_app_screens.png" alt="Finale App Screens">
+    </section>
+
+    <!-- Ergebnisse und Reflexion -->
+    <section>
+        <h2>Ergebnisse und Reflexion</h2>
+        <div>
+            <h3>Ergebnisse</h3>
+            <p>
+                KIM hat das Potenzial, den Markt für soziale Plattformen zu revolutionieren, indem es echte, tiefe Verbindungen priorisiert.
+            </p>
+            <p>
+                Zukünftige Usability-Tests und A/B-Tests werden die Features weiter verbessern und die Nutzerfreundlichkeit validieren.
+            </p>
+            <img src="styleguide_colors_typography.png" alt="Styleguide Farben und Typografie">
+        </div>
+        <div>
+            <h3>Learnings</h3>
+            <p>
+                Der größte Erfolg war die Balance zwischen Funktionalität und Emotionalität. Durch iterative Tests und Designprozesse konnten wir KIM als Plattform mit „Seele“ etablieren.
+            </p>
+            <p>
+                Für zukünftige Projekte würden wir frühere Usability-Tests und tiefere Validierung der KI-Funktionen einplanen.
+            </p>
+            <img src="reflection_chart.png" alt="Reflexion und Learnings">
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section>
+        <h2>Interaktiver Prototyp</h2>
+        <p>Erleben Sie KIM in Aktion und entdecken Sie die Features, die tiefe Verbindungen schaffen.</p>
+        <a href="#" class="btn">Prototyp ansehen</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 KIM – Die Verbindungs-App. Alle Rechte vorbehalten.</p>
+        <p><a href="#">Zurück zum Portfolio</a></p>
+    </footer>
+</body>
+
+
+</html>
