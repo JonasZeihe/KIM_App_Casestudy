@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     "architecture.html",
     "ux_process.html",
     "final_design.html",
-    "results.html",
     "reflection.html",
   ];
 
