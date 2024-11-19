@@ -1,0 +1,59 @@
+KIM_App_Casestudy/
+├── .gitignore
+├── .git/
+├── assets/
+│   ├── css/
+│   │   ├── base.css
+│   │   ├── components.css
+│   │   ├── layout.css
+│   │   ├── responsive.css
+│   │   └── variables.css
+│   ├── images/
+│   │   ├── appscreens/
+│   │   │   ├── final_app_screens_1.png
+│   │   │   ├── final_app_screens_10.png
+│   │   │   ├── final_app_screens_11.png
+│   │   │   ├── final_app_screens_2.png
+│   │   │   ├── final_app_screens_3.png
+│   │   │   ├── final_app_screens_4.png
+│   │   │   ├── final_app_screens_5.png
+│   │   │   ├── final_app_screens_6.png
+│   │   │   ├── final_app_screens_7.png
+│   │   │   ├── final_app_screens_8.png
+│   │   │   └── final_app_screens_9.png
+│   │   ├── competitor_analysis.png
+│   │   ├── conceptual_insights.png
+│   │   ├── hero_kim_chat_screen.png
+│   │   ├── information_architecture_diagram.png
+│   │   ├── interview_quotes.png
+│   │   ├── key_findings_diagram.png
+│   │   ├── KIM_logo_large.png
+│   │   ├── KIM_logo_small.png
+│   │   ├── persona_tom.png
+│   │   ├── project_overview.png
+│   │   ├── styleguide_colors_typography.png
+│   │   ├── user_flow.png
+│   │   ├── user_journey_map.png
+│   │   ├── user_research_insights.png
+│   │   ├── user_story_tom.png
+│   │   └── wireframes_mid_fidelity.png
+│   └── js/
+│       └── dynamicContent.js
+├── pages/
+│   ├── architecture.html
+│   ├── final_design.html
+│   ├── introduction.html
+│   ├── project_overview.html
+│   ├── reflection.html
+│   ├── research.html
+│   └── ux_process.html
+├── .gitignore
+├── about.html
+├── contact.html
+├── first approach.html
+├── index.html
+├── KIM_App_Casestudy.code-workspace
+├── LICENSE
+├── raw_data.md
+├── README.md
+└── skryper_2024-10-11_20-05-09 .exe

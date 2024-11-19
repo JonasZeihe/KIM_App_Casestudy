@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  // Dynamisch zu ladende Abschnitte
   const sections = [
     "introduction.html",
     "project_overview.html",
@@ -11,16 +12,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const content = document.getElementById("content");
 
-  // Alle Seiten aus dem `pages`-Ordner laden und in den Hauptcontainer einfügen
+  // Lade HTML-Seiten und füge sie in den Hauptcontainer ein
   for (const section of sections) {
     try {
       const response = await fetch(`pages/${section}`);
       if (!response.ok) throw new Error(`Seite ${section} konnte nicht geladen werden.`);
       const html = await response.text();
 
-      // Wrapper für jede geladene Section
       const sectionDiv = document.createElement("div");
-      sectionDiv.id = section.replace(".html", ""); // ID basierend auf Dateinamen
+      sectionDiv.id = section.replace(".html", ""); // ID aus Dateinamen ableiten
       sectionDiv.innerHTML = html;
       content.appendChild(sectionDiv);
     } catch (error) {
@@ -28,25 +28,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Scrollverhalten mit Offset
+  // Scrollverhalten mit Offset für Navigation
   document.querySelectorAll("header .navigation a").forEach((link) => {
     link.addEventListener("click", (e) => {
-      e.preventDefault(); // Standard-Verhalten unterbinden
+      e.preventDefault();
       const targetId = link.getAttribute("data-page");
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
         const headerHeight = document.querySelector("header").offsetHeight;
-        const offsetTop = targetSection.offsetTop - headerHeight - 10; // Berücksichtige Header-Höhe und zusätzlichen Abstand
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        });
+        const offsetTop = targetSection.offsetTop - headerHeight - 10;
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
       }
     });
   });
 
-  // Hamburger Menu Toggle
+  // Hamburger Menü Toggle
   const burgerMenu = document.querySelector(".burger-menu");
   const navigation = document.querySelector(".navigation ul");
 
@@ -58,54 +55,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Burger menu or navigation not found.");
   }
 
-  // Carousel-Setup
+  // Carousel-Funktionalität
   const carouselTrack = document.querySelector(".carousel-track");
 
   if (carouselTrack) {
-    // Dynamisch Bilder aus dem Ordner laden
-    const appScreens = [];
-
-    try {
-      const response = await fetch("assets/images/App Screens/");
-      if (!response.ok) throw new Error("Fehler beim Abrufen des Verzeichnisses.");
-    
-      // Textinhalt des Verzeichnisses verarbeiten (Simulation für serverseitige Verzeichnisauflistung)
-      const text = await response.text();
-      const parser = new DOMParser();
-      const htmlDocument = parser.parseFromString(text, "text/html");
-      const links = htmlDocument.querySelectorAll("a");
-    
-      // Füge alle PNG-Bilder aus dem Verzeichnis zur Liste hinzu
-      links.forEach((link) => {
-        const href = link.getAttribute("href");
-        if (href.endsWith(".png") || href.endsWith(".jpg") || href.endsWith(".jpeg")) {
-          appScreens.push(`assets/images/App Screens/${href}`);
-        }
-      });
-    } catch (error) {
-      console.error("Fehler beim Laden der Screens:", error.message);
-    }
-    
-
-    // Slides für jede App-Screen-Datei erstellen
-    appScreens.forEach((src) => {
-      const slide = document.createElement("div");
-      slide.classList.add("carousel-slide");
-
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = "App Screen";
-
-      slide.appendChild(img);
-      carouselTrack.appendChild(slide);
-    });
-
-    // Carousel-Funktionalität aktivieren
-    initializeCarousel();
+    initializeCarousel(carouselTrack);
   }
 
-  function initializeCarousel() {
-    const track = document.querySelector(".carousel-track");
+  // Funktion für Carousel-Setup
+  function initializeCarousel(track) {
     const slides = Array.from(track.children);
     const nextButton = document.querySelector(".carousel-button.next");
     const prevButton = document.querySelector(".carousel-button.prev");
@@ -135,43 +93,23 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    // Initial Carousel-Setup
+    // Initialisiere Carousel
     updateCarousel();
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const burgerMenu = document.querySelector(".burger-menu");
-    const navigation = document.querySelector(".navigation ul");
-    const navLinks = document.querySelectorAll(".navigation a");
-    let lastScrollTop = 0; // Speichert die letzte Scrollposition
-    const header = document.querySelector("header");
-  
-    // Burger-Menü Toggle
-    burgerMenu.addEventListener("click", () => {
-      navigation.classList.toggle("active");
-    });
-  
-    // Header schließt bei Klick auf einen Link
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navigation.classList.remove("active");
-      });
-    });
-  
-    // Header verschwindet beim Scrollen nach unten und taucht wieder auf
-    window.addEventListener("scroll", () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-      if (scrollTop > lastScrollTop) {
-        // Scrollt nach unten
-        header.style.top = "-100px"; // Versteckt den Header
-      } else {
-        // Scrollt nach oben
-        header.style.top = "0"; // Zeigt den Header
-      }
-  
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Speichert die aktuelle Scrollposition
-    });
+  // Header Scroll Hide/Show
+  const header = document.querySelector("header");
+  let lastScrollTop = 0;
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      header.style.top = "-100px"; // Versteckt den Header
+    } else {
+      header.style.top = "0"; // Zeigt den Header
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
-  
 });
