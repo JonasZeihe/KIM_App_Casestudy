@@ -139,4 +139,40 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Initial Carousel-Setup
     updateCarousel();
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const navigation = document.querySelector(".navigation ul");
+    const navLinks = document.querySelectorAll(".navigation a");
+    let lastScrollTop = 0; // Speichert die letzte Scrollposition
+    const header = document.querySelector("header");
+  
+    // Burger-Menü Toggle
+    burgerMenu.addEventListener("click", () => {
+      navigation.classList.toggle("active");
+    });
+  
+    // Header schließt bei Klick auf einen Link
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("active");
+      });
+    });
+  
+    // Header verschwindet beim Scrollen nach unten und taucht wieder auf
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+      if (scrollTop > lastScrollTop) {
+        // Scrollt nach unten
+        header.style.top = "-100px"; // Versteckt den Header
+      } else {
+        // Scrollt nach oben
+        header.style.top = "0"; // Zeigt den Header
+      }
+  
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Speichert die aktuelle Scrollposition
+    });
+  });
+  
 });

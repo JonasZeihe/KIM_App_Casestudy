@@ -40,7 +40,7 @@
   /* Subtitle Styling */
   .section-header .subtitle {
     font-size: 18px;
-    color: var(--neutral-4); /* Neutral Gray */
+    color: var(--primary-3); /* Neutral Gray */
     font-style: italic;
     margin-bottom: 20px;
   }

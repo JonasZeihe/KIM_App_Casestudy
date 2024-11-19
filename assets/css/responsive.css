@@ -5,78 +5,24 @@
     overflow-x: hidden;
   }
 
-  .container {
-    padding: 10px;
-    max-width: 100%;
-  }
-
-  .grid-2,
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .main-section {
-    padding: 30px 10px;
-    margin: 0 auto;
-    max-width: 100%;
-  }
-
-  header {
-    padding: 5px 10px; /* Reduziertes Padding für weniger Höhe */
-    height: auto;
-    background: var(--primary-3); /* Hintergrund bleibt dunkel */
-  }
-
-  header nav {
-    flex-direction: row; /* Elemente in einer Reihe */
-    justify-content: space-between;
-    align-items: center; /* Vertikale Ausrichtung */
-    gap: 10px;
-  }
-
-  header .logo h1 {
-    font-size: 24px; /* Logo bleibt sichtbar */
-    margin: 0;
-    line-height: 1; /* Keine zusätzliche Höhe */
-  }
-
   header .burger-menu {
     display: block;
-    font-size: 22px; /* Größe des Burger-Icons */
-    padding: 5px;
-    color: var(--neutral-1); /* Weiß */
-    background: transparent; /* Kein weißer Hintergrund */
-    border: none;
-    cursor: pointer;
   }
 
   header .navigation ul {
-    display: none; /* Standardmäßig versteckt */
+    display: none;
     flex-direction: column;
     gap: 8px;
-    width: 100%;
-    padding: 0;
-    background: var(--primary-3); /* Gleicher Hintergrund wie der Header */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
   }
-
   header .navigation ul.active {
-    display: flex; /* Aktivierte Navigation sichtbar */
-    background: var(--primary-3); /* Sicherstellen, dass es dunkel bleibt */
+    display: flex;
+    background: var(--primary-3);
+    padding: 10px;
   }
 
   .card {
-    padding: 20px;
-    margin: 0 auto 15px;
     max-width: 600px;
-  }
-
-  .image-placeholder,
-  .image-medium,
-  .appscreen {
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
+    margin: 15px auto;
   }
 
   footer {
@@ -90,67 +36,15 @@
     font-size: 12px;
   }
 
-  h1 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .btn {
-    padding: 8px 12px;
-    font-size: 14px;
-    display: block;
-    margin: 10px auto;
-  }
-
   header {
-    padding: 4px 8px; /* Weniger Platzverbrauch */
-    height: auto;
-    background: var(--primary-3); /* Dunkler Hintergrund bleibt */
-  }
-
-  header nav {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 8px;
-  }
-
-  header .logo h1 {
-    font-size: 22px; /* Logo bleibt etwas kleiner */
-    margin: 0;
-    line-height: 1;
-  }
-
-  header .burger-menu {
-    font-size: 20px;
-    padding: 4px;
-    color: var(--neutral-1);
-    background: transparent; /* Kein Hintergrund */
-    border: none;
-  }
-
-  header .navigation ul {
-    gap: 6px;
-    background: var(--primary-3); /* Gleicher Hintergrund wie der Header */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    padding: 8px;
   }
 
   .main-section {
-    padding: 20px 10px;
+    padding: 10px;
   }
 
   .card {
-    padding: 15px;
-    margin: 10px auto;
     max-width: 400px;
   }
 

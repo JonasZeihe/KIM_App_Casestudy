@@ -1,11 +1,12 @@
 /* Navigation */
 header {
-  background: var(--primary-3);
-  color: var(--neutral-1);
+  background: var(--primary-3); /* Dark Primary */
+  color: var(--neutral-1); /* White */
   padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: top 0.3s ease;
 }
 header nav {
   display: flex;
@@ -27,109 +28,23 @@ header .navigation a {
 header .navigation a:hover {
   color: var(--secondary-1);
 }
-
-/* Burger Menu Default State */
 header .burger-menu {
-  display: none; /* Standard */
-  background: transparent; /* Entfernt weißen Kasten */
-  color: var(--neutral-1); /* Weiß */
+  display: none; /* Standard versteckt */
+  background: transparent;
+  color: var(--neutral-1);
   font-size: 24px;
   padding: 10px;
   border: none;
+  cursor: pointer;
 }
-
-/* Burger Menu Hover */
 header .burger-menu:hover {
-  color: var(--secondary-1); /* Sekundärfarbe */
-  background: transparent; /* Kein Hover-Hintergrund */
+  color: var(--secondary-1);
+  background: transparent;
 }
-
-
-/* Styling für offene Navigation */
 header .navigation ul.active {
   background: var(--neutral-1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Carousel angepasst an bestehendes Design */
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 12px;
-  background: var(--neutral-1); /* Weißer Hintergrund */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Carousel Track */
-.carousel-track {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-  width: 100%;
-}
-
-/* Carousel Slide */
-.carousel-slide {
-  flex: 0 0 100%; /* Füllt den gesamten Container */
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Carousel Slide Image */
-.carousel-slide img {
-  width: 100%; /* Füllt den Slide aus */
-  height: auto;
-  object-fit: cover; /* Schneidet Bilder proportional zu */
-  border-radius: 12px;
-}
-
-
-/* Buttons angepasst */
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--primary-3); /* Primärfarbe */
-  color: var(--neutral-1); /* Weiß */
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 10px 15px;
-  z-index: 10;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-button.prev {
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
-}
-
-.carousel-button:hover {
-  background: var(--primary-2); /* Hover-Farbe */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-
-
-
-  /* Footer */
-  footer {
-    background: var(--primary-3); /* Primary Main */
-    color: var(--neutral-1); /* White */
-    text-align: center;
-    padding: 10px;
-    font-size: var(--font-size-detail);
-    margin-top: 20px;
-  }
 
 /* Cards */
 .card {
@@ -142,20 +57,17 @@ header .navigation ul.active {
 }
 .card:hover {
   transform: translateY(-5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
-
-  /* Unordered List Emojis */
-  .card ul li {
-    margin-bottom: 10px;
-    font-size: var(--font-size-body);
-    list-style: none;
-  }
-  .card ul li:before {
-    margin-right: 10px;
-    color: var(--secondary-3); /* Secondary Main */
-  }
+.card ul li {
+  margin-bottom: 10px;
+  font-size: var(--font-size-body);
+  list-style: none;
+}
+.card ul li:before {
+  margin-right: 10px;
+  color: var(--secondary-3); /* Secondary Main */
+}
 
 /* Buttons */
 .btn {
@@ -175,9 +87,62 @@ header .navigation ul.active {
   box-shadow: 0 6px 15px rgba(253, 122, 38, 0.5);
 }
 
-/* Images */
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--neutral-1); /* Weißer Hintergrund */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+.carousel-slide {
+  flex: 0 0 100%; /* Füllt den gesamten Container */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-slide img {
+  width: 100%; /* Füllt den Slide aus */
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-3);
+  color: var(--neutral-1);
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.carousel-button.prev {
+  left: 10px;
+}
+.carousel-button.next {
+  right: 10px;
+}
+.carousel-button:hover {
+  background: var(--primary-2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
-/* Image Placeholder Styling */
+/* Images */
 .image-placeholder {
   width: 100%;
   height: 200px;
@@ -191,7 +156,6 @@ header .navigation ul.active {
   border-radius: 12px;
   margin: 20px 0;
 }
-
 .appscreen-placeholder {
   width: 100%;
   max-width: 300px;
@@ -200,26 +164,24 @@ header .navigation ul.active {
   justify-content: center;
   align-items: center;
   background: var(--neutral-2); /* Light Gray */
-  color: var(--neutral-5); /* Darker Gray */
+  color: var(--neutral-5);
   font-size: 14px;
-  border: 2px dashed var(--neutral-3); /* Gray */
+  border: 2px dashed var(--neutral-3);
   border-radius: 8px;
   margin: 10px auto;
 }
-
-/* Bilder */
 .image-large {
   width: 100%;
   border-radius: 16px;
   margin-top: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 .image-medium {
   width: 100%;
   max-width: 600px;
   border-radius: 12px;
   margin: 20px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .appscreen {
   width: 100%;
@@ -227,4 +189,14 @@ header .navigation ul.active {
   border-radius: 8px;
   margin: 0 auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background: var(--primary-3); /* Primary Main */
+  color: var(--neutral-1); /* White */
+  text-align: center;
+  padding: 10px;
+  font-size: var(--font-size-detail);
+  margin-top: 20px;
 }
